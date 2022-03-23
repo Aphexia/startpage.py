@@ -10,7 +10,7 @@ SubText='Have a nice day.'                              # The text that is displ
 # Note that if you want to use a Windows path for the following, you either need to escape every backslash (\\) or use a raw string (r''). Use normal slashes on Linux.
 importPath=r'pathTo\content.txt'                        # Where to find the file with the site data.
 outputPath=r"pathTo\index.html"                         # Where to place the index.html output file. If you change this you either need to change others paths in the css too or add resources as a subfolder to that directory.
-hourOffset=0                                            # Apply permanent offset to clock. For more information look into readme.
+hourOffset=7                                            # Apply permanent offset to clock. For more information look into readme.
 
 
 def importContent():
