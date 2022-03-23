@@ -1,4 +1,4 @@
-# Startpage
+# Startpage - Forked from IAmBaut - Learning slowly how to edit HTML/CSS. All credit goes to IAmBaut 
 
 A small script to generate a startpage written in Python.
 
