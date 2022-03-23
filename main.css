@@ -1,22 +1,34 @@
 /*Most easy/basic changes can be done up here in the root area, edit the rest if you know what it does.*/
 :root{
---stripebackground:#e2c8d4;         /*The color of the small stripe just under the header*/
+--stripebackground:#eec847;         /*The color of the small stripe just under the header*/
 --windowbackground: #d0a4af;        /*The color of the background of the main window main area.*/
 --maintextcolor:#000;               /*The color of the text in the main area.*/
 --headercolor:#fff;                 /*The color of the text in the header/title.*/
 --linktextcolor:var(--maintextcolor); /*This line means that the links will have the same color as the normal text in the main area of the window. Change if you want different colors.*/
 --backgroundImageUrl:url("resources/images/background.jpg");  /*The URL to the image you want to use as background.*/
---focusImageUrl:url("resources/images/wave.png");   /*The URL to the image you want to use for the foreground.*/
+--focusImageUrl:url("resources/images/riceer.png");   /*The URL to the image you want to use for the foreground.*/
 --backgroundBlur:blur(2px);                           /*Change how blurry the background is. Higher number is more blurry.*/
---backgroundBorder:#000;                           /*If you have a blurry background, set the color of the border around the image to fit it here.*/
---letterSpace:2px;                                    /*Define how far letters are spaced from each other in pixels.*/
+--backgroundBorder:#eec847;                           /*If you have a blurry background, set the color of the border around the image to fit it here.*/
+--letterSpace:0px;                                    /*Define how far letters are spaced from each other in pixels.*/
 /* The font style doesn't seem to work as variable defined here. If you want to change the font, scroll to the bottom of the document to change the path.*/
 
 /* These are the font sizes for every element with text respectively:*/
 --windowtitlefontsize:17px;           /*Font size used by the window title and clock*/
 --windowsubtitlefontsize:17px;        /*Font size used by the subtitle*/
---categorytitlefontsize:25px;         /*Font size used by the category titles*/
---categorycontentfontsize:15px;       /*Font size used by the category contents*/
+--title1fontsize:25px;         /*Font size used by the title1 text size*/
+--title2fontsize:25px;         /*Font size used by the title2 text size*/
+--title3fontsize:25px;         /*Font size used by the title3 text size*/
+--title4fontsize:25px;         /*Font size used by the title4 text size*/
+--title5fontsize:25px;         /*Font size used by the title5 text size*/
+--title6fontsize:25px;         /*Font size used by the title6 text size*/
+--title7fontsize:25px;         /*Font size used by the title6 text size*/
+--text1fontsize:15px;       /*Font size used by the text1 contents*/
+--text2fontsize:15px;       /*Font size used by the text2 contents*/
+--text3fontsize:15px;       /*Font size used by the text3 contents*/
+--text4fontsize:15px;      /*Font size used by the text4 contents*/
+--text5fontsize:15px;       /*Font size used by the text4 contents*/
+--text6fontsize:15px;       /*Font size used by the text4 contents*/
+--text7fontsize:15px;       /*Font size used by the text4 contents*/
 
 /* The following settings are for the pixel overlay effect:*/
 --pixeloverlay-exists:visible;        /*Activate or deactivate the "pixel effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
@@ -25,7 +37,7 @@
 
 /* The following setting are for the vignette overlay effect:*/
 --vignetteoverlay-exists:visible;     /*Activate or deactivate the "vignette effect" overlay. Set to 'visible' to activate, set to 'hidden' to deactivate. When set to 'hidden' the other settings in this category don't matter.*/
---vignetteoverlay-intensity:0.5;      /*How intense the overlay should be. Float between 0 and 1, but recommended range is between 0 and 0.5. Higher values make the vignette much darker. */
+--vignetteoverlay-intensity:0.7;      /*How intense the overlay should be. Float between 0 and 1, but recommended range is between 0 and 0.5. Higher values make the vignette much darker. */
 --vignetteoverlay-size:50%;           /*How big the "radius" of the vignette should be. It is minimal at 0% and as big as the screen (and thus invisible) at 100%. Accepts % values. */
 }
 /*Everything below here (maybe except the font) is normal css and far more likely to break things if you edit it.*/
@@ -57,13 +69,8 @@
   top: 3px;
   right: 5px;
 }
-.centerDivs{
-  display: table;
-  top:0px;
-  left:0px;
-  height: 100%;
-  width: 100%;
-}
+
+
 .front-img{
   position: inherit;
   width: 339px;
@@ -114,29 +121,148 @@
   top:65px;
   background-color:var(--windowbackground);
 }
-.category{
-  height:100%;
-  width: 100%;
-  display:table-cell;
-  vertical-align:middle;
+
+
+.title1{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  width:170px;
+  text-align: center;
   position: relative;
-  top: -20px; /*This is a bit hacky, but since each title has a top margin of 20px, the whole text is misaligned by 20px downwards. This compensates for that.*/
+  margin-top: -15px;
 }
-.categorytitle{
-  font-size: var(--categorytitlefontsize);
-  font-weight: normal;
-  width:605px;
+
+.title2{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  width:220px;
+  text-align: center;
+  position: relative;
+  margin-top: 15px;
+
+  }
+
+.title3{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  width:280px;
+  text-align: center;
+  position: relative;
+  margin-top: 17px;
+
+  }
+
+.title4{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  width:320px;
   text-align: center;
   position: relative;
   margin-top: 20px;
+
+  }
+
+  .title5{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  width:750px;
+  height: -20px;
+  text-align: center;
+  position: relative;
+  margin-top: -20px;
+
+  }
+
+ .title6{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  width: 750px;
+  text-align: right;
+  position: relative;
+  margin-top: px;
+
+  }
+
+.title7{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  width:750px;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+
+  }
+
+.text1{
+  font-size: 15px;
+  width:170px;
+  position:relative;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: -2px;
 }
-.categorycontent{
-  font-size: var(--categorycontentfontsize);
-  width:605px;
+
+.text2{
+  font-size: 15px;
+  width:220px;
+  position:relative;
+  text-align: center;
+  font-weight: normal;
+  margin-top: -1px;
+}
+
+.text3{
+  font-size: 15px;
+  width:280px;
   position:relative;
   text-align: center;
   font-weight: lighter;
   margin-top: 5px;
+}
+
+.text4{
+  font-size: 15px;
+  width:200px;
+  position:relative;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+.text5{
+  font-size: 15px;
+  width:750px;
+  position:relative;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+.text6{
+  font-size: var(--text5fontsize);
+  width:200px;
+  position:relative;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: 5px;
+
+}
+
+.text7{
+  font-size: var(--text5fontsize);
+  width:200px;
+  position:relative;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: 5px;
+
 }
 .pixeloverlay{
   width: 100%;
